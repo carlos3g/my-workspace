@@ -10,10 +10,15 @@ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 
 export $USER="carlos_mesquita"
 export PROJECTS="/home/$USER/Documents/programming/projetos"
+
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+
 export ANDROID_HOME=/home/$USER/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 export PATH="$PATH:`yarn global bin`"
 
 # Path to your oh-my-zsh installation.
@@ -154,5 +159,5 @@ SPACESHIP_PROMPT_ORDER=(
 )
 SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-#SPACESHIP_CHAR_SYMBOL="?"
+#SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
