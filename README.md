@@ -6,23 +6,30 @@ script para baixar, instalar e configurar algumas coisas do meu ambiente Linux. 
 
 2. configure o arquivo `.zshrc` da maneira que quiser (você precisa trocar meu user pelo seu)
 
-3. execute o comando a seguir no diretório do arquivo: `./workspace.sh`
+3. execute o comando a seguir no diretório do arquivo: `./programs && workspace.sh`
 
 ## Minhas extensões do VS Code
 esse script não instala as extensões do VS Code, então aqui estão listadas
 
 1. Better Comments
 2. Bracket Pair Colorizer
-3. Color Highlight
-4. Dracula Official
-5. ESLint
-6. GitLens
-7. Import Cost
-8. indent-rainbow
-9. Live Server
-10. Material Icon Theme
-11. Portuguese (Brasil)
-12. Python
-13. Rewrap
-14. Rocketseat React Native
-15. Rocketseat ReactJS
+3. C/C++
+4. Color Highlight
+5. Dracula Official
+6. EditorConfig for VS Code
+7. ESLint
+8. GitLens
+9. Import Cost
+10. indent-rainbow
+11. Live Server
+12. Material Icon Theme
+13. Night Owl
+14. Omni
+15. Path Intellisense
+16. Portuguese (Brasil)
+17. Python
+18. Python Docstring Generator
+19. Rewrap
+20. Rocketseat React Native
+21. Rocketseat ReactJS
+22. vscode-styled-components
