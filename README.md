@@ -6,7 +6,9 @@ script para baixar, instalar e configurar algumas coisas do meu ambiente Linux. 
 
 2. configure o arquivo `.zshrc` da maneira que quiser (você precisa trocar meu user pelo seu)
 
-3. execute o comando a seguir no diretório do arquivo: `./programs && workspace.sh`
+3. abra a pasta que corresponde a sua distro
+
+4. execute o comando a seguir dentro do diretório: `./workspace.sh`
 
 ## Minhas extensões do VS Code
 esse script não instala as extensões do VS Code, então aqui estão listadas
