@@ -1,8 +1,23 @@
 #!/bin/bash
 set -e
 
+# PPAS
+sudo add-apt-repository ppa:atareao/telegram # Telegram
+sudo add-apt-repository ppa:nilarimogard/webupd8 # woeusb
+
+sudo apt-get update
+
 # - Telegram
-wget -c -P ~/Downloads/programs https://telegram.org/dl/desktop/linux
+sudo apt-get install telegram -y
+
+# - Hyper
+wget -c -P ~/Downloads/programs https://releases.hyper.is/download/deb
+
+# woeusb
+sudo apt install woeusb -y
+
+# BalenaEtcher
+wget -c -P ~/Downloads/programs https://github.com/balena-io/etcher/releases/download/v1.5.100/balenaEtcher-1.5.100-x64.AppImage
 
 # - Discord
 wget -c -P ~/Downloads/programs https://discordapp.com/api/download?platform=linux&format=deb
@@ -26,6 +41,6 @@ wget -c -P ~/Downloads/programs https://dl.google.com/linux/direct/google-chrome
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
 sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get -y install apt-transport-https
-sudo apt-get -y update
-sudo apt-get -y install code
+sudo apt-get install apt-transport-https -y
+sudo apt-get update
+sudo apt-get install code -y
