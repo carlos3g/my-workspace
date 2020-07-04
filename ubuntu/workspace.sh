@@ -12,7 +12,7 @@ sudo apt upgrade -y
 sudo apt install python3 python3-pip python3-dev python3-venv idle3 -y
 
 clear
-echo "---- FOLDERS ----"
+echo "---- ESTRUTURA DE PASTAS ----"
 
 # estrutura de pastas
 mkdir -p ~/Downloads/ISOs
@@ -23,6 +23,7 @@ mkdir -p ~/Documents/programming/arduino
 mkdir -p ~/Documents/programming/open-source
 mkdir -p ~/Documents/programming/projetos
 mkdir -p ~/Android/Sdk
+mkdir -p ~/.config/Code/User
 
 # programas
 clear
@@ -47,3 +48,9 @@ echo "---- CONFIGS ----"
 mv ../.zshrc ~
 # - VS Code
 mv ../settings.json ~/.config/Code/User
+
+# comandos que necessitam ficar no final do arquivo
+# react-native android sdk
+~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

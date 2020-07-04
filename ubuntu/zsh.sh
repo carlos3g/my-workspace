@@ -4,10 +4,8 @@ set -e
 # -- zsh
 sudo apt install zsh -y
 chsh -s $(which zsh)
-# - oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # - fira code font
-add-apt-repository universe
+sudo add-apt-repository universe -y
 sudo apt-get update
 sudo apt install fonts-firacode -y
 # - spaceship

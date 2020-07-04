@@ -31,4 +31,3 @@ yarn global add expo-cli -y
 # configurando android jdk
 wget https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip -O commandlinetools-linux.zip
 unzip ./commandlinetools-linux.zip -d ~/Android/Sdk
-~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y
