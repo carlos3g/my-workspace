@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+
 # nodejs
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -28,6 +29,6 @@ yarn global add react-native-cli -y
 yarn global add expo-cli -y
 
 # configurando android jdk
-wget -P ~/Android/Sdk https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip -O commandlinetools-linux.zip
-unzip ~/Android/Sdk/commandlinetools-linux.zip
+wget https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip -O commandlinetools-linux.zip
+unzip ./commandlinetools-linux.zip -d ~/Android/Sdk
 ~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y

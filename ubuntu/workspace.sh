@@ -9,7 +9,10 @@ sudo apt update
 sudo apt upgrade -y
 
 # python
-sudo apt install python3 python3-pip python3-env idle3 -y
+sudo apt install python3 python3-pip python3-dev python3-venv idle3 -y
+
+clear
+echo "---- FOLDERS ----"
 
 # estrutura de pastas
 mkdir -p ~/Downloads/ISOs
@@ -19,16 +22,25 @@ mkdir -p ~/Documents/programming/python
 mkdir -p ~/Documents/programming/arduino
 mkdir -p ~/Documents/programming/open-source
 mkdir -p ~/Documents/programming/projetos
-mkdir -P ~/Android/Sdk
+mkdir -p ~/Android/Sdk
 
 # programas
+clear
+echo "---- PROGRAMS.sh ----"
 ./programs.sh
 
 # react e react-native
+clear
+echo "---- REACT-NATIVE.sh ----"
 ./react-native.sh
 
 # zsh
+clear
+echo "---- ZSH.sh ----"
 ./zsh.sh
+
+clear
+echo "---- CONFIGS ----"
 
 # -- configs
 # - zshrc
