@@ -14,11 +14,11 @@ sudo apt install python3 python3-pip python3-env idle3 -y
 # estrutura de pastas
 mkdir -p ~/Downloads/ISOs
 mkdir -p ~/Downloads/programs
-mkdir -p ~/Documentos/programming/js
-mkdir -p ~/Documentos/programming/python
-mkdir -p ~/Documentos/programming/arduino
-mkdir -p ~/Documentos/programming/open-source
-mkdir -p ~/Documentos/programming/projetos
+mkdir -p ~/Documents/programming/js
+mkdir -p ~/Documents/programming/python
+mkdir -p ~/Documents/programming/arduino
+mkdir -p ~/Documents/programming/open-source
+mkdir -p ~/Documents/programming/projetos
 mkdir -P ~/Android/Sdk
 
 # programas
