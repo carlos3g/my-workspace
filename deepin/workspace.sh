@@ -9,7 +9,10 @@ sudo apt update
 sudo apt upgrade -y
 
 # python
-sudo apt install python3 python3-pip python3-env idle3 -y
+sudo apt install python3 python3-pip python3-dev python3-venv idle3 -y
+
+clear
+echo "---- ESTRUTURA DE PASTAS ----"
 
 # estrutura de pastas
 mkdir -p ~/Downloads/ISOs
@@ -19,19 +22,40 @@ mkdir -p ~/Documents/programming/python
 mkdir -p ~/Documents/programming/arduino
 mkdir -p ~/Documents/programming/open-source
 mkdir -p ~/Documents/programming/projetos
-mkdir -P ~/Android/Sdk
+mkdir -p ~/Android/Sdk
+mkdir -p ~/.config/Code/User
+
+# permissões
+chmod +x ./programs.sh
+chmod +x ./react-native.sh
+chmod +x ./zsh.sh
 
 # programas
+clear
+echo "---- PROGRAMS.sh ----"
 ./programs.sh
 
 # react e react-native
+clear
+echo "---- REACT-NATIVE.sh ----"
 ./react-native.sh
 
 # zsh
+clear
+echo "---- ZSH.sh ----"
 ./zsh.sh
 
-# -- configs
+clear
+echo "---- CONFIGS ----"
+
 # - zshrc
 mv ../.zshrc ~
 # - VS Code
 mv ../settings.json ~/.config/Code/User
+
+
+# ----- comandos que necessitam ficar no final do arquivo -----
+# react-native android sdk
+~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

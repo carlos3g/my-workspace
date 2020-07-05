@@ -48,13 +48,15 @@ echo "---- ZSH.sh ----"
 clear
 echo "---- CONFIGS ----"
 
-# -- configs
 # - zshrc
 mv ../.zshrc ~
 # - VS Code
 mv ../settings.json ~/.config/Code/User
+# - mostrar todos os aplicativos de inicialização
+sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 
-# comandos que necessitam ficar no final do arquivo
+
+# ----- comandos que necessitam ficar no final do arquivo -----
 # react-native android sdk
 ~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y
 # oh-my-zsh
