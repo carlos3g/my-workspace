@@ -5,8 +5,13 @@ set -e
 # PPAS
 sudo add-apt-repository ppa:atareao/telegram -y # Telegram
 sudo add-apt-repository ppa:nilarimogard/webupd8 -y # woeusb
+echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" | sudo tee -a /etc/apt/sources.list.d/insomnia.list # Insomnia
+wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc | sudo apt-key add - # Insomnia
 
 sudo apt-get update
+
+# - Insomnia
+sudo apt-get install insomnia
 
 # - Telegram
 sudo apt-get install telegram -y
