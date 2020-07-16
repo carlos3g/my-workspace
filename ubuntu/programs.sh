@@ -1,14 +1,20 @@
 #!/bin/bash
 set -e
 
-
-# PPAS
+# ----- PPAS -----
 sudo add-apt-repository ppa:atareao/telegram -y # Telegram
 sudo add-apt-repository ppa:nilarimogard/webupd8 -y # woeusb
-echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" | sudo tee -a /etc/apt/sources.list.d/insomnia.list # Insomnia
-wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc | sudo apt-key add - # Insomnia
+## Insomnia
+echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc | sudo apt-key add -
+## VSCode
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+
 
 sudo apt-get update
+
 
 # - Insomnia
 sudo apt-get install insomnia
@@ -41,8 +47,4 @@ wget -c -P ~/Downloads/programs https://dl.google.com/linux/direct/google-chrome
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # - VS Code
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-sudo apt-get update
 sudo apt-get install code -y
