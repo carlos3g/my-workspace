@@ -29,9 +29,10 @@ esse script não instala as extensões do VS Code, então aqui estão listadas
 14. Omni
 15. Path Intellisense
 16. Portuguese (Brasil)
-17. Python
-18. Python Docstring Generator
-19. Rewrap
-20. Rocketseat React Native
-21. Rocketseat ReactJS
-22. vscode-styled-components
+17. Prettier - Code formatter
+18. Python
+19. Python Docstring Generator
+20. Rewrap
+21. Rocketseat React Native
+22. Rocketseat ReactJS
+23. vscode-styled-components
