@@ -54,6 +54,8 @@ mv ../.zshrc ~
 mv ../settings.json ~/.config/Code/User
 # - mostrar todos os aplicativos de inicialização
 sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
+# - teclado abnt2
+setxkbmap -model abnt2 -layout br
 
 
 # ----- comandos que necessitam ficar no final do arquivo -----
