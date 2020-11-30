@@ -57,9 +57,5 @@ sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 # - teclado abnt2
 setxkbmap -model abnt2 -layout br
 
-
-# ----- comandos que necessitam ficar no final do arquivo -----
-# react-native android sdk
-~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+clear
+echo "Tudo ok, agora execute os últimos comandos"

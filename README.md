@@ -10,6 +10,12 @@ script para baixar, instalar e configurar algumas coisas do meu ambiente Linux. 
 
 4. execute o comando a seguir dentro do diretório: `./workspace.sh`
 
+5. os seguintes comandos devem ser executados manualmente, após a finalização do script:  
+&nbsp;&nbsp;&nbsp;&nbsp;* `~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y`  
+&nbsp;&nbsp;&nbsp;&nbsp;* `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`  
+&nbsp;&nbsp;&nbsp;&nbsp;* `sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH/themes/spaceship-prompt"`  
+&nbsp;&nbsp;&nbsp;&nbsp;* `sudo ln -s "$ZSH/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/themes/spaceship.zsh-theme"`  
+
 ## Minhas extensões do VS Code
 esse script não instala as extensões do VS Code, então aqui estão listadas
 
