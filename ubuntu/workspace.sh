@@ -48,10 +48,6 @@ echo "---- ZSH.sh ----"
 clear
 echo "---- CONFIGS ----"
 
-# - zshrc
-mv ../.zshrc ~
-# - VS Code
-mv ../settings.json ~/.config/Code/User
 # - mostrar todos os aplicativos de inicialização
 sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 # - teclado abnt2
