@@ -2,11 +2,8 @@
 set -e
 
 # wget, curl e git
-sudo apt-get install curl -y
-sudo apt-get install wget -y
-sudo apt-get install git -y
-sudo apt update
-sudo apt upgrade -y
+sudo apt-get install curl wget git -y
+sudo apt update && sudo apt upgrade -y
 
 # python
 sudo apt install python3 python3-pip python3-dev python3-venv idle3 -y
@@ -16,21 +13,12 @@ echo "---- ESTRUTURA DE PASTAS ----"
 
 # estrutura de pastas
 case $1 in
-"pt_br")
-mkdir -p ~/Documen/programming/js
-mkdir -p ~/Documen/programming/python
-mkdir -p ~/Documen/programming/arduino
-mkdir -p ~/Documen/programming/open-source
-mkdir -p ~/Documen/programming/projetos
+"pt_br") mkdir -p ~/Documen/programming/{js,python,arduino,open-source,projetos}
 ;;
-"en") 
-mkdir -p ~/Documents/programming/js
-mkdir -p ~/Documents/programming/python
-mkdir -p ~/Documents/programming/arduino
-mkdir -p ~/Documents/programming/open-source
-mkdir -p ~/Documents/programming/projetos
+"en") mkdir -p ~/Documents/programming/{js,python,arduino,open-source,projetos}
 ;;
-*) echo "invalid language" ;;
+*) echo "invalid language"
+;;
 esac
 mkdir -p ~/Downloads/ISOs
 mkdir -p ~/Downloads/programs
