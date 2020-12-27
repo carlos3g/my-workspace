@@ -13,7 +13,7 @@ echo "---- ESTRUTURA DE PASTAS ----"
 
 # estrutura de pastas
 case $1 in
-"pt_br") mkdir -p ~/Documen/programming/{js,python,arduino,open-source,projetos}
+"pt_br") mkdir -p ~/Documentos/programming/{js,python,arduino,open-source,projetos}
 ;;
 "en") mkdir -p ~/Documents/programming/{js,python,arduino,open-source,projetos}
 ;;
