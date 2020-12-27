@@ -22,9 +22,6 @@ sudo apt-get install insomnia
 # - Telegram
 sudo apt-get install telegram -y
 
-# - Hyper
-wget -c -P ~/Downloads/programs https://releases.hyper.is/download/deb
-
 # BalenaEtcher
 wget -c -P ~/Downloads/programs https://github.com/balena-io/etcher/releases/download/v1.5.100/balenaEtcher-1.5.100-x64.AppImage
 
