@@ -15,13 +15,25 @@ clear
 echo "---- ESTRUTURA DE PASTAS ----"
 
 # estrutura de pastas
-mkdir -p ~/Downloads/ISOs
-mkdir -p ~/Downloads/programs
+case $1 in
+"pt_br")
+mkdir -p ~/Documen/programming/js
+mkdir -p ~/Documen/programming/python
+mkdir -p ~/Documen/programming/arduino
+mkdir -p ~/Documen/programming/open-source
+mkdir -p ~/Documen/programming/projetos
+;;
+"en") 
 mkdir -p ~/Documents/programming/js
 mkdir -p ~/Documents/programming/python
 mkdir -p ~/Documents/programming/arduino
 mkdir -p ~/Documents/programming/open-source
 mkdir -p ~/Documents/programming/projetos
+;;
+*) echo "invalid language" ;;
+esac
+mkdir -p ~/Downloads/ISOs
+mkdir -p ~/Downloads/programs
 mkdir -p ~/Android/Sdk
 mkdir -p ~/.config/Code/User
 
