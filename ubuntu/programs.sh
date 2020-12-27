@@ -31,9 +31,6 @@ wget -c -P ~/Downloads/programs https://discordapp.com/api/download?platform=lin
 # - Stacer
 wget -c -P ~/Downloads/programs https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/Stacer-1.1.0-x64.AppImage
 
-# - Arduino IDE
-wget -c -P ~/Downloads/programs https://downloads.arduino.cc/arduino-1.8.12-linux64.tar.xz
-
 # - WPS Office
 wget -c -P ~/Downloads/programs http://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9126/wps-office_11.1.0.9126.XA_amd64.deb
 
