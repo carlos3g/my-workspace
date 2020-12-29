@@ -48,11 +48,6 @@ echo "---- ZSH.sh ----"
 clear
 echo "---- CONFIGS ----"
 
-# - zshrc
-mv ../.zshrc ~
-# - VS Code
-mv ../settings.json ~/.config/Code/User
-
 
 # ----- comandos que necessitam ficar no final do arquivo -----
 # react-native android sdk
