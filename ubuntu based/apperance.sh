@@ -17,3 +17,7 @@ sudo apt-get install dconf-cli
 git clone https://github.com/dracula/gnome-terminal ~/Downloads/gnome-terminal
 cd gnome-terminal && ./install.sh
 rm -rf ~/Downloads/gnome-terminal
+
+# gedit
+wget https://raw.githubusercontent.com/dracula/gedit/master/dracula.xml
+mv dracula.xml ~/.local/share/gedit/styles/
