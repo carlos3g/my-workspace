@@ -8,3 +8,6 @@ sudo apt-get update
 
 # plank
 sudo apt-get install plank
+
+# gnome tweaks
+sudo apt install gnome-tweaks
