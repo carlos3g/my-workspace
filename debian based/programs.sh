@@ -4,9 +4,6 @@ set -e
 # - Telegram
 wget -c -P ~/Downloads/programs https://telegram.org/dl/desktop/linux
 
-# - Hyper
-wget -c -P ~/Downloads/programs https://releases.hyper.is/download/deb
-
 # - woeusb
 sudo apt install woeusb -y
 
