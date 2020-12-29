@@ -2,7 +2,7 @@
 set -e
 
 # wget, curl e git
-sudo apt-get install curl wget git -y
+sudo apt-get install curl wget git g++ -y
 sudo apt update && sudo apt upgrade -y
 
 # python
