@@ -22,9 +22,6 @@ wget -c -P ~/Downloads/programs https://github.com/oguzhaninan/Stacer/releases/d
 # - Arduino IDE
 wget -c -P ~/Downloads/programs https://downloads.arduino.cc/arduino-1.8.12-linux64.tar.xz
 
-# - WPS Office
-wget -c -P ~/Downloads/programs http://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9126/wps-office_11.1.0.9126.XA_amd64.deb
-
 # - Chrome
 wget -c -P ~/Downloads/programs https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
