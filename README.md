@@ -4,13 +4,11 @@ script para baixar, instalar e configurar algumas coisas do meu ambiente Linux. 
 ## Instalação
 1. descompacte o arquivo
 
-2. configure o arquivo `.zshrc` da maneira que quiser (você precisa trocar meu user pelo seu)
+2. abra a pasta que corresponde a sua distro
 
-3. abra a pasta que corresponde a sua distro
+3. execute o comando a seguir dentro do diretório(troque o 1º parâmetro de acordo com o idioma do SO): `./workspace.sh pt_br`
 
-4. execute o comando a seguir dentro do diretório: `./workspace.sh`
-
-5. os seguintes comandos devem ser executados manualmente, após a finalização do script:  
+4. os seguintes comandos devem ser executados manualmente, após a finalização do script:  
 &nbsp;&nbsp;&nbsp;&nbsp;* `~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y`  
 &nbsp;&nbsp;&nbsp;&nbsp;* `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`  
 &nbsp;&nbsp;&nbsp;&nbsp;* `sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH/themes/spaceship-prompt"`  
