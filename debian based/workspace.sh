@@ -2,11 +2,8 @@
 set -e
 
 # wget, curl e git
-sudo apt-get install curl -y
-sudo apt-get install wget -y
-sudo apt-get install git -y
-sudo apt update
-sudo apt upgrade -y
+sudo apt-get install curl wget git -y
+sudo apt update && sudo apt upgrade -y
 
 # python
 sudo apt install python3 python3-pip python3-dev python3-venv idle3 -y
