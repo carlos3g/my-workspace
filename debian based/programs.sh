@@ -19,9 +19,6 @@ wget -c -P ~/Downloads/programs https://discordapp.com/api/download?platform=lin
 # - Stacer
 wget -c -P ~/Downloads/programs https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/Stacer-1.1.0-x64.AppImage
 
-# - Arduino IDE
-wget -c -P ~/Downloads/programs https://downloads.arduino.cc/arduino-1.8.12-linux64.tar.xz
-
 # - Chrome
 wget -c -P ~/Downloads/programs https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
