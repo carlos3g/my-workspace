@@ -12,12 +12,12 @@ sudo apt-get install plank
 # gnome tweaks
 sudo apt install gnome-tweaks
 
-# gnome-terminal
+# dracula-theme/gnome-terminal
 sudo apt-get install dconf-cli
 git clone https://github.com/dracula/gnome-terminal ~/Downloads/gnome-terminal
 cd gnome-terminal && ./install.sh
 rm -rf ~/Downloads/gnome-terminal
 
-# gedit
+# dracula-theme/gedit
 wget https://raw.githubusercontent.com/dracula/gedit/master/dracula.xml
 mv dracula.xml ~/.local/share/gedit/styles/
