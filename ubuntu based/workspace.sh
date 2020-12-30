@@ -52,6 +52,8 @@ echo "---- CONFIGS ----"
 sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 # - teclado abnt2
 setxkbmap -model abnt2 -layout br
+# - git configs
+git config --global core.editor "nano"
 
 clear
 echo -e '\033[01;33mQuase tudo ok. agora execute estes comandos:\033[0m'
