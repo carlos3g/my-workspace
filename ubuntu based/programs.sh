@@ -37,5 +37,9 @@ wget -c -P ~/Downloads/programs https://dl.google.com/linux/direct/google-chrome
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+# discord
+wget -c -O ~/Downloads/programs/discord.deb https://discord.com/api/download?platform=linux&format=deb
+sudo dpkg -i ~/Downloads/programs/discord.deb
+
 # - VS Code
 sudo apt-get install code -y
