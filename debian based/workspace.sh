@@ -48,6 +48,9 @@ echo "---- ZSH.sh ----"
 clear
 echo "---- CONFIGS ----"
 
+# - git configs
+git config --global core.editor "nano"
+
 # react-native android sdk
 # this command needs to be run manually
 # oh-my-zsh
