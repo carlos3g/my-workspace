@@ -48,9 +48,16 @@ echo "---- ZSH.sh ----"
 clear
 echo "---- CONFIGS ----"
 
-
-# ----- comandos que necessitam ficar no final do arquivo -----
 # react-native android sdk
-~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y
+# this command needs to be run manually
 # oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# this command needs to be run manually
+
+clear
+echo -e '\033[01;33mQuase tudo ok. agora execute estes comandos:\033[0m'
+echo '\n'
+echo -e '\033[01;32m❯ \033[0m\033[01;36m~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y\033[0m'
+echo -e '\033[01;32m❯ \033[0m\033[01;36msh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" \033[0m'
+echo -e '\033[01;32m❯ \033[0m\033[01;36msudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH/themes/spaceship-prompt" \033[0m'
+echo -e '\033[01;32m❯ \033[0m\033[01;36msudo ln -s "$ZSH/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/themes/spaceship.zsh-theme" \033[0m'
+echo '\n\n\n'
