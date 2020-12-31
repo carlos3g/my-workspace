@@ -4,9 +4,6 @@ set -e
 # - Telegram
 wget -c -P ~/Downloads/programs https://telegram.org/dl/desktop/linux
 
-# - woeusb
-sudo apt install woeusb -y
-
 # - BalenaEtcher
 wget -c -P ~/Downloads/programs https://github.com/balena-io/etcher/releases/download/v1.5.100/balenaEtcher-1.5.100-x64.AppImage
 
