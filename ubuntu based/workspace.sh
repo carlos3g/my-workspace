@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-# wget, curl e git
-sudo apt-get install curl wget git g++ -y
+# wget, curl, g++, unrar, unzip e git
+sudo apt-get install curl wget git g++ unrar unzip -y
 sudo apt update && sudo apt upgrade -y
 
 # python
