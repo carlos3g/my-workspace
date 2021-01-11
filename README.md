@@ -14,6 +14,9 @@ scripts para baixar, instalar e configurar algumas coisas do meu ambiente Linux.
    * `sudo git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH/themes/spaceship-prompt"`  
    * `sudo ln -s "$ZSH/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/themes/spaceship.zsh-theme"`  
 
+## :warning: Atenção :warning:
+Caso for usar o arquivo `apperance.sh`, rode ele por último.
+
 ## Minhas extensões do VS Code
 1. Better Comments
 2. Bracket Pair Colorizer
