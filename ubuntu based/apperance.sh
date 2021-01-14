@@ -15,7 +15,7 @@ sudo apt install gnome-tweaks
 # dracula-theme/gnome-terminal
 sudo apt-get install dconf-cli
 git clone https://github.com/dracula/gnome-terminal ~/Downloads/gnome-terminal
-cd gnome-terminal && ./install.sh
+cd ~/Downloads/gnome-terminal && ./install.sh
 rm -rf ~/Downloads/gnome-terminal
 
 # dracula-theme/gedit
