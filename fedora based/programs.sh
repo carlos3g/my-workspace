@@ -10,8 +10,11 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf check-update
 
 
-# Homebrew
+# - Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # - VS Code
 sudo dnf install code -y
+
+# - Gnome Tweaks
+sudo dnf install gnome-tweaks -y
