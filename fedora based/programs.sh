@@ -15,3 +15,6 @@ sudo dnf check-update
 
 # - VS Code
 sudo dnf install code -y
+
+# - Gnome tweaks
+sudo dnf install gnome-tweaks -y
