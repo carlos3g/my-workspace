@@ -40,3 +40,6 @@ sudo dpkg -i ~/Downloads/programs/discord.deb
 
 # - VS Code
 sudo apt-get install code -y
+
+# gnome tweaks
+sudo apt install gnome-tweaks

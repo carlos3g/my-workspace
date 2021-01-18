@@ -9,9 +9,6 @@ sudo apt-get update
 # plank
 sudo apt-get install plank
 
-# gnome tweaks
-sudo apt install gnome-tweaks
-
 # dracula-theme/gnome-terminal
 sudo apt-get install dconf-cli
 git clone https://github.com/dracula/gnome-terminal ~/Downloads/gnome-terminal
