@@ -7,7 +7,8 @@ sudo add-apt-repository -y ppa:ricotz/docky
 sudo apt-get update
 
 # plank
-sudo apt-get install plank
+# sudo apt-get install plank
+# It's recommended to use "dash-to-dock" extension instead of plank
 
 # dracula-theme/gnome-terminal
 sudo apt-get install dconf-cli
