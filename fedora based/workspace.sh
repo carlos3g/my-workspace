@@ -40,7 +40,7 @@ clear && echo "---- ZSH.sh ----"
 clear && echo "---- CONFIGS ----"
 
 # - git configs
-git config --global core.editor "nano"
+# https://gist.github.com/carlos3g/7a676386eb6bdfe983e0982310f7f5b3
 
 clear
 echo -e '\033[01;33mQuase tudo ok. agora execute estes comandos:\033[0m'
