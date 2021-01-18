@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# -- instalando zsh
+# - instalando zsh
 sudo dnf install zsh -y
 chsh -s $(which zsh)
 

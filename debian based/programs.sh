@@ -7,7 +7,7 @@ wget -c -P ~/Downloads/programs https://telegram.org/dl/desktop/linux
 # - BalenaEtcher
 wget -c -P ~/Downloads/programs https://github.com/balena-io/etcher/releases/download/v1.5.100/balenaEtcher-1.5.100-x64.AppImage
 
-# discord
+# - discord
 wget -c -O ~/Downloads/programs/discord.deb https://discord.com/api/download?platform=linux&format=deb
 sudo dpkg -i ~/Downloads/programs/discord.deb
 
@@ -17,7 +17,7 @@ wget -c -P ~/Downloads/programs https://github.com/oguzhaninan/Stacer/releases/d
 # - Chrome
 wget -c -P ~/Downloads/programs https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-# Homebrew
+# - Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # - VS Code

@@ -1,16 +1,15 @@
 #!/bin/bash
 set -e
 
-# wget, curl, g++, unzip e git
+# - wget, curl, g++, unzip e git
 sudo dnf install git-all curl wget git g++ unzip -y
 
-# python
+# - python
 sudo dnf install python3 python3-pip idle3 -y
 
-clear
-echo "---- ESTRUTURA DE PASTAS ----"
+clear && echo "---- ESTRUTURA DE PASTAS ----"
 
-# estrutura de pastas
+# - estrutura de pastas
 case $1 in
 "pt_br") mkdir -p ~/Documentos/programming/{js,python,arduino,open-source,projetos}
 ;;
@@ -24,28 +23,21 @@ mkdir -p ~/Downloads/programs
 mkdir -p ~/Android/Sdk
 mkdir -p ~/.config/Code/User
 
-# permissões
+# - permissões
 chmod +x ./programs.sh
 chmod +x ./react-native.sh
 chmod +x ./zsh.sh
 
-# programas
-clear
-echo "---- PROGRAMS.sh ----"
+clear && echo "---- PROGRAMS.sh ----"
 ./programs.sh
 
-# react e react-native
-clear
-echo "---- REACT-NATIVE.sh ----"
+clear && echo "---- REACT-NATIVE.sh ----"
 ./react-native.sh
 
-# zsh
-clear
-echo "---- ZSH.sh ----"
+clear && echo "---- ZSH.sh ----"
 ./zsh.sh
 
-clear
-echo "---- CONFIGS ----"
+clear && echo "---- CONFIGS ----"
 
 # - git configs
 git config --global core.editor "nano"
