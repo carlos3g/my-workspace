@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-# - wget, curl, g++, unzip, xclip e git
-sudo dnf install git-all curl wget xclip git g++ unzip -y
+# - git, curl, wget, xclip, g++, unzip and dconf
+sudo dnf install git git-all curl wget xclip g++ unzip dconf -y
 
 # - python
 sudo dnf install python3 python3-pip idle3 -y
