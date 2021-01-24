@@ -11,7 +11,6 @@ sudo apt-get update
 # It's recommended to use "dash-to-dock" extension instead of plank
 
 # - dracula-theme/gnome-terminal
-sudo apt-get install dconf-cli
 git clone https://github.com/dracula/gnome-terminal ~/Downloads/gnome-terminal
 cd ~/Downloads/gnome-terminal && ./install.sh
 rm -rf ~/Downloads/gnome-terminal

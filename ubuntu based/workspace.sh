@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-# - wget, curl, g++, unrar, unzip e git
-sudo apt-get install curl wget git g++ unrar unzip -y
+# - curl, wget, git, g++, unrar, unzip and dconf-cli
+sudo apt-get install curl wget git g++ unrar unzip dconf-cli -y
 sudo apt update && sudo apt upgrade -y
 
 # - python
