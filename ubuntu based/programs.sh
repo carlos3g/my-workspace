@@ -17,7 +17,7 @@ sudo apt-get update
 
 
 # - Insomnia
-sudo apt-get install insomnia
+sudo apt-get install insomnia -y
 
 # - Telegram
 sudo apt-get install telegram -y
@@ -42,4 +42,4 @@ sudo dpkg -i ~/Downloads/programs/discord.deb
 sudo apt-get install code -y
 
 # - Gnome tweaks
-sudo apt install gnome-tweaks
+sudo apt install gnome-tweaks -y

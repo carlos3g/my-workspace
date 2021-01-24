@@ -3,7 +3,7 @@ set -e
 
 # - Nodejs
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get install -y nodejs
+sudo apt-get install nodejs -y
 
 # - Yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -17,7 +17,7 @@ sudo apt-get install build-essential libssl-dev -y
 sudo apt-get install gcc-multilib lib32z1 lib32stdc++6 -y
 
 # - jdk8
-sudo add-apt-repository ppa:openjdk-r/ppa
+sudo add-apt-repository ppa:openjdk-r/ppa -y
 sudo apt-get update
 sudo apt-get install openjdk-8-jdk -y
 sudo update-alternatives --config java

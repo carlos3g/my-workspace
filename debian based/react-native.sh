@@ -17,7 +17,7 @@ sudo apt-get install build-essential libssl-dev -y
 sudo apt-get install gcc-multilib lib32z1 lib32stdc++6 -y
 
 # - jdk8
-sudo add-apt-repository ppa:openjdk-r/ppa
+sudo add-apt-repository ppa:openjdk-r/ppa -y
 sudo apt-get update
 sudo apt-get install openjdk-8-jdk -y
 sudo update-alternatives --config java
