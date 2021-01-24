@@ -2,7 +2,7 @@
 set -e
 
 # ----- PPAS -----
-sudo add-apt-repository -y ppa:ricotz/docky
+# sudo add-apt-repository -y ppa:ricotz/docky # ppa for plank
 
 sudo apt-get update
 
