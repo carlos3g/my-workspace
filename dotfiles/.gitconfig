@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+	name = # put your username here
+	email = # put your gmail here
+
+[core]
+	editor = nano
+	excludesfile = ~/.gitignore_global
+
+[alias]
+	ci = commit
+	cm = checkout master
+	cb = checkout -b
