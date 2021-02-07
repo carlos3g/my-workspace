@@ -15,7 +15,8 @@ scripts para baixar, instalar e configurar algumas coisas do meu ambiente Linux.
    * `sudo ln -s "$ZSH/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/themes/spaceship.zsh-theme"`  
 
 ## :warning: Atenção :warning:
-Caso for usar o arquivo `apperance.sh`, rode ele por último.
+* Caso for usar o arquivo `apperance.sh`, rode ele por último.
+* Todos os arquivos foram feitos para serem usados com gnome.
 
 ## Minhas extensões do VS Code
 1. Better Comments
