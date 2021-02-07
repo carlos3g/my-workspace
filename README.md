@@ -2,11 +2,13 @@
 scripts para baixar, instalar e configurar algumas coisas do meu ambiente Linux. Caso você queira usar o script, siga os passos abaixo
 
 ## Instalação
-1. descompacte o arquivo (caso tenha baixo compactado)
+1. Clone o repositório e entre na pasta do clone
+   * `git clone https://github.com/carlos3g/my-linux-workspace.git && cd my-linux-workspace`
 
 2. abra a pasta que corresponde a qual distro a sua foi baseada
 
-3. execute o comando a seguir dentro do diretório(troque o 1º parâmetro de acordo com o idioma do SO): `./workspace.sh pt_br`
+3. execute o arquivo `./workspace.sh`, veja aqui os parâmetros necessários
+   * Ex. `./workspace.sh pt_br`
 
 4. os seguintes comandos devem ser executados manualmente, após a finalização do script:  
    * `~/Android/Sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-27" "build-tools;27.0.3" -y`  
