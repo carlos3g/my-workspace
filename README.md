@@ -1,6 +1,6 @@
 # my-linux-workspace
 
-scripts para baixar, instalar e configurar algumas coisas do meu ambiente Linux. Caso você queira usar o script, siga os passos abaixo
+scripts para baixar, instalar e configurar o próprio sistema e ferramentas adicionais do meu ambiente Linux.
 
 ## :wrench: Instalação
 
