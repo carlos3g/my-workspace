@@ -28,7 +28,7 @@ cd distros/fedora\ based
 
 Todo tipo de contribuição é bem-vinda, nós admiramos isso!
 
-Tem algum problema? Encontrou um bug ou exercício incorreto? Tem alguma dica? Abra uma [issue](https://github.com/carlos3g/my-linux-workspace/issues) descrevendo.
+Tem algum problema? Encontrou um bug? Tem alguma dica? Abra uma [issue](https://github.com/carlos3g/my-linux-workspace/issues) descrevendo.
 
 Quer contribuir com código? Pedimos que antes leia [este guia de contribuição](https://github.com/firstcontributions/first-contributions)
 
