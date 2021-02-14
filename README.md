@@ -24,6 +24,16 @@ cd distros/fedora\ based
 ./workspace.sh pt_br
 ```
 
+## 🤝 Contribuindo 
+
+Todo tipo de contribuição é bem-vinda, nós admiramos isso!
+
+Tem algum problema? Encontrou um bug ou exercício incorreto? Tem alguma dica? Abra uma [issue](https://github.com/carlos3g/my-linux-workspace/issues) descrevendo.
+
+Quer contribuir com código? Pedimos que antes leia [este guia de contribuição](https://github.com/firstcontributions/first-contributions)
+
+Não esqueça de deixar a sua ⭐, também é um modo de contribuir com o projeto ;)
+
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
