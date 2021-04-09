@@ -28,9 +28,7 @@ mkdir -p ~/Android/Sdk
 mkdir -p ~/.config/Code/User
 
 # - permissões
-chmod +x ./programs.sh
-chmod +x ./react-native.sh
-chmod +x ./zsh.sh
+chmod +x ./*.sh
 
 clear && echo "---- PROGRAMS.sh ----"
 ./programs.sh
