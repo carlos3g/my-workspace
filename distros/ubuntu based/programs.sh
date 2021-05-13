@@ -28,9 +28,6 @@ wget -c -P ~/Downloads/programs https://github.com/balena-io/etcher/releases/dow
 # - Stacer
 wget -c -P ~/Downloads/programs https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/Stacer-1.1.0-x64.AppImage
 
-# - Chrome
-wget -c -P ~/Downloads/programs https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
 # - Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
