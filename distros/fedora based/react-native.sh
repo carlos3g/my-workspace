@@ -10,5 +10,4 @@ sudo dnf install yarn -y
 yarn config set -- --emoji true
 
 # - react, react-native-cli e expo-cli
-yarn global add react-native-cli -y
-yarn global add expo-cli -y
+sudo yarn global add react-native-cli expo-cli -y
