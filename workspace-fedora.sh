@@ -1,6 +1,6 @@
 set -e
 
-sudo dnf install git git-all curl wget xclip g++ unzip dconf util-linux-user python3 python3-pip -y
+sudo dnf install git curl wget xclip g++ unzip dconf util-linux-user python3 python3-pip -y
 
 ### programs
 ## repositories
