@@ -10,7 +10,8 @@ sudo apt update -y
 sudo apt install telegram gnome-tweaks -y
 
 ### nodejs related
-sudo apt install nodejs npm -y
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install nodejs -y
 sudo npm install --global yarn
 yarn config set -- --emoji true
 ## yarn global installations
