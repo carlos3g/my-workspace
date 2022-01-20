@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-	name = # put your username here
-	email = # put your gmail here
+	name = Carlos Mesquita
+	email = 52337966+carlos3g@users.noreply.github.com
 
 [core]
 	editor = nano
