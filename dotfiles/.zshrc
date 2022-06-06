@@ -1,10 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH="$PATH:`yarn global bin`"
+export PATH="`yarn global bin`:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/$USER/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load
 ZSH_THEME="spaceship"
@@ -68,8 +68,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export USER="carlos3g"
-export PROJECTS="/home/$USER/Documentos/projects"
+export PROJECTS="$HOME/Documentos/projects"
 
 # Personal aliases
 alias copy='xclip -selection clipboard -i $1'
