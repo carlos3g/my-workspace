@@ -18,7 +18,7 @@ sudo apt install git curl wget xclip g++ unrar unzip dconf-cli util-linux python
 sudo add-apt-repository ppa:atareao/telegram
 ## installations
 sudo apt update -y
-sudo apt install telegram gnome-tweaks -y
+sudo apt install telegram -y
 
 ### nodejs related
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
