@@ -13,6 +13,8 @@
 
 set -e
 
+sudo dnf check-update -y && sudo dnf upgrade -y
+
 sudo dnf install git curl wget xclip g++ unzip dconf util-linux-user python3 python3-pip dnf-plugins-core -y
 
 # brave install

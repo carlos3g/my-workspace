@@ -13,6 +13,8 @@
 
 set -e
 
+sudo apt update -y && sudo apt upgrade -y
+
 sudo apt install git curl wget xclip g++ unrar unzip dconf-cli util-linux python3 python3-pip python3-dev gpg apt-transport-https -y
 
 # brave install
