@@ -5,6 +5,8 @@
 # ------------------------------------------------------------------------------
 # This script prepares my fedora based distro after installation. It includes:
 # - Installs some utils
+# - Installs Brave Browser
+# - Installs Telegram
 # - Installs VS Code
 # - Installs NodeJS and Yarn
 # - Installs expo-cli
@@ -13,7 +15,12 @@ set -e
 
 sudo dnf install git curl wget xclip g++ unzip dconf util-linux-user python3 python3-pip dnf-plugins-core -y
 
-# telegram
+# brave install
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf install brave-browser
+
+# telegram install
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install telegram -y
 

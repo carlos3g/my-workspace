@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 # This script prepares my ubuntu based distro after installation. It includes:
 # - Installs some utils
+# - Installs Brave Browser
 # - Installs Telegram
 # - Installs NodeJS and Yarn
 # - Installs expo-cli
@@ -12,6 +13,13 @@
 set -e
 
 sudo apt install git curl wget xclip g++ unrar unzip dconf-cli util-linux python3 python3-pip python3-dev -y
+
+# brave install
+sudo apt install apt-transport-https -y
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update -y
+sudo apt install brave-browser -y
 
 # telegram install
 sudo add-apt-repository ppa:atareao/telegram
