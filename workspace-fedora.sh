@@ -26,15 +26,17 @@ sudo dnf install brave-browser
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install telegram -y
 
-# vs code
+# vs code install
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 dnf check-update -y
 sudo dnf install code -y
 
-### nodejs related
+# nodejs install
+curl -fsSL https://rpm.nodesource.com/setup_lts.x | sudo bash -
 sudo dnf install nodejs -y
+
+# nodejs related installations
 sudo npm install --global yarn
 yarn config set -- --emoji true
-## yarn global installations
 sudo yarn global add expo-cli -y

@@ -36,10 +36,11 @@ rm -f packages.microsoft.gpg
 sudo apt update -y
 sudo apt install code -y
 
-### nodejs related
+# nodejs install
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install nodejs -y
+
+# nodejs related installations
 sudo npm install --global yarn
 yarn config set -- --emoji true
-## yarn global installations
 sudo yarn global add expo-cli -y
