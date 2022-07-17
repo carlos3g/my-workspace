@@ -1,3 +1,16 @@
+#!/bin/bash
+# ------------------------------------------------------------------------------
+# author: Carlos Mesquita 
+# website: https://carlos3g.github.io
+# ------------------------------------------------------------------------------
+# This script:
+# - Installs ZSH
+# - Makes ZSH the default shell
+# - Installs Oh-my-ZSH
+# - Installs and applies spaceship theme
+# - Installs zinit
+# - Downloads my custom .zshrc
+
 set -e
 
 ### install zsh, make it default and downloads my ~/.zshrc

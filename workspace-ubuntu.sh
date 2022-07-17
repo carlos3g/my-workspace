@@ -1,3 +1,14 @@
+#!/bin/bash
+# ------------------------------------------------------------------------------
+# author: Carlos Mesquita 
+# website: https://carlos3g.github.io
+# ------------------------------------------------------------------------------
+# This script prepares my ubuntu based distro after installation. It includes:
+# - Installs some utils
+# - Installs Telegram
+# - Installs NodeJS and Yarn
+# - Installs expo-cli
+
 set -e
 
 sudo apt install git curl wget xclip g++ unrar unzip dconf-cli util-linux python3 python3-pip python3-dev -y

@@ -1,4 +1,12 @@
 #!/bin/bash
+# ------------------------------------------------------------------------------
+# author: Carlos Mesquita 
+# website: https://carlos3g.github.io
+# ------------------------------------------------------------------------------
+# This script makes some style changes in the system. Which includes:
+# - Install fonts
+# - Install themes
+
 set -e
 
 sudo dnf install fira-code-fonts -y

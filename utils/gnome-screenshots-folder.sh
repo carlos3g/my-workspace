@@ -1,4 +1,10 @@
-## This changes the screenshots folder to ~/Images/screenshots. Only works in gnome.
+#!/bin/bash
+# ------------------------------------------------------------------------------
+# author: Carlos Mesquita 
+# website: https://carlos3g.github.io
+# ------------------------------------------------------------------------------
+# This script changes the screenshots folder to ~/Images/screenshots. Only works in gnome.
+
 set -e
 
 mkdir ~/screenshots

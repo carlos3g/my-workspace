@@ -1,3 +1,14 @@
+#!/bin/bash
+# ------------------------------------------------------------------------------
+# author: Carlos Mesquita 
+# website: https://carlos3g.github.io
+# ------------------------------------------------------------------------------
+# This script prepares my fedora based distro after installation. It includes:
+# - Installs some utils
+# - Installs VS Code
+# - Installs NodeJS and Yarn
+# - Installs expo-cli
+
 set -e
 
 sudo dnf install git curl wget xclip g++ unzip dconf util-linux-user python3 python3-pip -y
