@@ -13,10 +13,8 @@ set -e
 
 sudo apt install git curl wget xclip g++ unrar unzip dconf-cli util-linux python3 python3-pip python3-dev -y
 
-### programs
-## repositories
+# telegram install
 sudo add-apt-repository ppa:atareao/telegram
-## installations
 sudo apt update -y
 sudo apt install telegram -y
 
