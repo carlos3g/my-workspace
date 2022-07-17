@@ -2,6 +2,10 @@
 
 ## Usage
 
-```
+```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/carlos3g/my-linux-workspace/master/workspace-fedora.sh)"
 ```
+
+### Useful links
+
+- [specify the default save directory for gnome-screenshot](https://askubuntu.com/a/961149)
