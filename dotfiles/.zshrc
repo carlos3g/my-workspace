@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH="`yarn global bin`:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$(yarn global bin):$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -73,6 +73,7 @@ export PROJECTS="$HOME/Documentos/projects"
 # Personal aliases
 alias copy='xclip -selection clipboard -i $1'
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias docker-reset='sh -c "$(curl -fsSL https://gist.githubusercontent.com/carlos3g/c2a994b50e9c1f4e626c700fe79be84a/raw/75e14e1c288eff3e452bebf8de6afcf6ac292cd7/docker-reset.sh)"'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
