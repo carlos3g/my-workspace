@@ -73,7 +73,7 @@ export PROJECTS="$HOME/Documentos/projects"
 # Personal aliases
 alias copy='xclip -selection clipboard -i $1'
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-alias docker-reset='sh -c "$(curl -fsSL https://gist.githubusercontent.com/carlos3g/c2a994b50e9c1f4e626c700fe79be84a/raw/75e14e1c288eff3e452bebf8de6afcf6ac292cd7/docker-reset.sh)"'
+alias docker-reset='sh -c "$(curl -fsSL https://gist.githubusercontent.com/carlos3g/c2a994b50e9c1f4e626c700fe79be84a/raw)"'
 alias git-clean-branchs="git fetch -p && for branch in `git branch -vv --no-color | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
 
 # You may need to manually set your language environment
