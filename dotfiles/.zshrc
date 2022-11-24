@@ -131,5 +131,6 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light spaceship-prompt/spaceship-prompt
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions

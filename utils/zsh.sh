@@ -7,7 +7,6 @@
 # - Installs ZSH
 # - Makes ZSH the default shell
 # - Installs Oh-my-ZSH
-# - Installs and applies spaceship theme
 # - Installs zinit
 # - Downloads my custom .zshrc
 
@@ -20,10 +19,6 @@ curl -Lo ~/.zshrc https://raw.githubusercontent.com/carlos3g/my-linux-workspace/
 
 ### oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-### spaceship
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 ### zinit
 sh -c "$(curl -fsSL https://git.io/zinit-install)"
