@@ -53,10 +53,12 @@ install_vs_code() {
 }
 
 install_nodejs() {
-  # See: https://github.com/nodesource/distributions/blob/master/README.md#deb
-  curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-
-  sudo apt install nodejs -y
+  # See: https://github.com/nvm-sh/nvm
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  
+  source ~/.zshrc
+  
+  nvm install 16
 }
 
 install_nodejs_related_programs() {
