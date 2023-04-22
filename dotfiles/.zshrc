@@ -1,13 +1,16 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH="$(yarn global bin):$PATH"
+# Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Android Studio
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load
-ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -68,13 +71,12 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export PROJECTS="$HOME/Documentos/projects"
 
 # Personal aliases
 alias copy='xclip -selection clipboard -i $1'
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias docker-reset='sh -c "$(curl -fsSL https://gist.githubusercontent.com/carlos3g/c2a994b50e9c1f4e626c700fe79be84a/raw)"'
-alias git-clean-branchs="git fetch -p && for branch in `git branch -vv --no-color | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
+alias git-clean-branchs='git fetch -p && for branch in `git branch -vv --no-color | grep ": gone]" | awk "{print $1}"`; do git branch -D $branch; done'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -134,7 +136,13 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light spaceship-prompt/spaceship-prompt
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
+zinit light spaceship-prompt/spaceship-prompt
+
+# Set name of the theme to load
+ZSH_THEME="spaceship"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$PATH:$(yarn global bin)"
