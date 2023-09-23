@@ -33,7 +33,7 @@ install_brave() {
 
 install_telegram() {
   # See: https://www.edivaldobrito.com.br/telegram-no-ubuntu-fedora/
-  sudo add-apt-repository ppa:atareao/telegram
+  sudo add-apt-repository -y ppa:atareao/telegram
 
   sudo apt update -y
   sudo apt install telegram -y
@@ -68,6 +68,18 @@ install_nodejs_related_programs() {
   sudo yarn global add expo-cli -y
 }
 
+install_android_studio() {
+  # See: https://www.edivaldobrito.com.br/instalar-android-studio-no-ubuntu/
+  sudo add-apt-repository -y ppa:maarten-fonville/android-studio
+  sudo apt-get update -y
+  sudo apt-get install -y android-studio
+}
+
+install_java() {
+  # See: https://stackoverflow.com/questions/52504825/how-to-install-jdk-11-under-ubuntu
+  sudo apt-get install -y openjdk-17-jdk
+}
+
 update_system
 install_utils
 install_brave
@@ -75,3 +87,5 @@ install_telegram
 install_vs_code
 install_nodejs
 install_nodejs_related_programs
+install_android_studio
+install_java
