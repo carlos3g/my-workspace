@@ -8,6 +8,10 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/10.0/bin
+
+# Java
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -133,7 +137,6 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light spaceship-prompt/spaceship-prompt
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light spaceship-prompt/spaceship-prompt
