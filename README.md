@@ -9,3 +9,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/carlos3g/my-linux-workspac
 ### Useful links
 
 - [specify the default save directory for gnome-screenshot](https://askubuntu.com/a/961149)
+- [Question: How to install Flipper in Ubuntu?](https://github.com/facebook/flipper/issues/1058)
