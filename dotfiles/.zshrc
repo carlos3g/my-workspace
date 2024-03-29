@@ -7,11 +7,20 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Android Studio
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/10.0/bin
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/12.0/bin
 
 # Java
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
+# WSL2
+export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
+export REACT_NATIVE_PACKAGER_HOSTNAME=$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
+#export ADB_TRACE=adb
+export ANDROID_SERIAL=emulator-5554
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -81,6 +90,16 @@ alias copy='xclip -selection clipboard -i $1'
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias docker-reset='sh -c "$(curl -fsSL https://gist.githubusercontent.com/carlos3g/c2a994b50e9c1f4e626c700fe79be84a/raw)"'
 alias git-clean-branchs='git fetch -p && for branch in `git branch -vv --no-color | grep ": gone]" | awk "{print $1}"`; do git branch -D $branch; done'
+
+# WSL2
+alias wsl-relays='socat -d -d TCP-LISTEN:5037,reuseaddr,fork TCP:$(cat /etc/resolv.conf | tail -n1 | cut -d " " -f 2):5037'
+alias wsl-adb-server='adb.exe kill-server && adb.exe -a -P 5037 nodaemon server'
+alias wsl-port-forward-show-all='netsh.exe interface portproxy show all'
+alias wsl-port-forward-reset='netsh.exe interface portproxy reset'
+
+wsl-port-forward() { # needs to be a function. related (i think): https://unix.stackexchange.com/a/516192
+	netsh.exe interface portproxy add v4tov4 listenport=$1 listenaddress=0.0.0.0 connectport=$1 connectaddress=$REACT_NATIVE_PACKAGER_HOSTNAME
+}
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
