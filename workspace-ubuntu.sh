@@ -58,7 +58,7 @@ install_nodejs() {
   
   source ~/.zshrc
   
-  nvm install 16
+  nvm install lts/iron
 }
 
 install_nodejs_related_programs() {
