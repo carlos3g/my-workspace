@@ -13,3 +13,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/carlos3g/my-workspace/mast
 - [Configure VM acceleration on Linux](https://developer.android.com/studio/run/emulator-acceleration#vm-linux)
 - [System audio problems while Android emulator is running](https://askubuntu.com/questions/1045052/system-audio-problems-while-android-emulator-is-running)
 - [Gist Comment about expo in wsl](https://gist.github.com/bergmannjg/461958db03c6ae41a66d264ae6504ade?permalink_comment_id=4152627#gistcomment-4152627)
+- [Location services turned off ("some of these settings are managed by your organization")](https://github.com/LeDragoX/Win-Debloat-Tools/issues/133)
+- [Windows stopped sharing clipboard history across devices](https://github.com/LeDragoX/Win-Debloat-Tools/issues/67)

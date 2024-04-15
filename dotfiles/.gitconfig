@@ -11,3 +11,6 @@
 	ci = commit
 	cm = checkout master
 	cb = checkout -b
+
+[init]
+  defaultBranch = main
