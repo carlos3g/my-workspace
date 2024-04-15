@@ -1,6 +1,6 @@
 #!/bin/bash
 # ------------------------------------------------------------------------------
-# author: Carlos Mesquita 
+# author: Carlos Mesquita
 # website: https://carlos3g.github.io
 # ------------------------------------------------------------------------------
 # This script:
@@ -23,4 +23,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sh -c "$(curl -fsSL https://git.io/zinit-install)"
 
 ### download my custom .zshrc
-curl -Lo ~/.zshrc https://raw.githubusercontent.com/carlos3g/my-linux-workspace/master/dotfiles/.zshrc
+curl -Lo ~/.zshrc https://raw.githubusercontent.com/carlos3g/my-workspace/master/dotfiles/.zshrc

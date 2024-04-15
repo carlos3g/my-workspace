@@ -3,7 +3,7 @@
 ## Usage
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/carlos3g/my-linux-workspace/master/workspace-fedora.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/carlos3g/my-workspace/master/workspace-fedora.sh)"
 ```
 
 ### Useful links
