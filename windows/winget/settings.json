@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/winget-settings.schema.json",
+
+  "visual": {
+    "progressBar": "rainbow"
+  },
+
+  "telemetry": {
+    "disable": true
+  }
+}
