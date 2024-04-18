@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  queues:
+    image: softwaremill/elasticmq-native
+    container_name: queues
+    ports:
+      - 9324:9324
+      - 9325:9325
+    volumes:
+      - ./custom.conf:/opt/elasticmq.conf
+    networks:
+      - example-network
+
+networks:
+  example-network:
+    driver: bridge

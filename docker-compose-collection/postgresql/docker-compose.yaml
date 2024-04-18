@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:10-alpine
+    restart: unless-stopped
+    container_name: postgres
+    env_file: .env
+    environment:
+      POSTGRES_MULTIPLE_DATABASES: ${DB_DATABASE},${DB_DATABASE}_test
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_SCHEMA: ${DB_SCHEMA}
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - ./postgres-scripts/:/docker-entrypoint-initdb.d/
+      - ./pgdata:/var/lib/postgresql/data
+    networks:
+      - example-network
+
+volumes:
+  pgdata:
+
+networks:
+  example-network:
+    driver: bridge
