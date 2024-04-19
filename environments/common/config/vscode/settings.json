@@ -1,0 +1,195 @@
+{
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[kotlin]": {
+    "editor.defaultFormatter": "fwcd.kotlin"
+  },
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "other": "off",
+      "strings": "off"
+    },
+    "editor.wordWrap": "off"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.tabSize": 4
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "shakram02.bash-beautify"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "accessibility.dimUnfocused.enabled": true,
+  "accessibility.dimUnfocused.opacity": 0.6,
+  "bracketPairColorizer.depreciation-notice": false,
+  "codesnap.backgroundColor": "transparent",
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0) 0px 20px 68px",
+  "codesnap.containerPadding": "0em",
+  "codesnap.showWindowControls": false,
+  "diffEditor.wordWrap": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.cursorWidth": 5,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.minimap.renderCharacters": false,
+  "editor.parameterHints.enabled": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.rulers": [80, 120],
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "blade": "html",
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "blade": "html",
+    "javascript": "jsx",
+    "typescript": "jsx"
+  },
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 4,
+  "extensions.ignoreRecommendations": false,
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.tsx": "typescriptreact",
+    ".drawio-config": "json",
+    ".env.*": "dotenv",
+    ".prettierrc": "json",
+    ".sequelizerc": "javascript",
+    ".stylelintrc": "json"
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/android/**": true,
+    "**/build/**": true,
+    "**/ios/**": true,
+    "**/node_modules/**": true,
+    "**/vendor/**": true
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false
+  },
+  "gitlens.hovers.currentLine.over": "line",
+  "hediet.vscode-drawio.customFonts": ["Fira Code"],
+  "hediet.vscode-drawio.customLibraries": [
+    {
+      "entryId": "aws4",
+      "libName": "aws4",
+      "url": "https://github.com/jgraph/drawio/blob/dev/src/main/webapp/stencils/aws4.xml"
+    }
+  ],
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.theme": "atlas",
+  "javascript.format.semicolons": "insert",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "material-icon-theme.activeIconPack": "nest",
+  "material-icon-theme.files.associations": {
+    "**.interceptor.ts": "nest-middleware",
+    ".drawio-config": "drawio"
+  },
+  "material-icon-theme.folders.associations": {
+    "abstracts": "template",
+    "adapters": "contract",
+    "domain": "class",
+    "dotfiles": "config",
+    "dtos": "contract",
+    "entities": "class",
+    "exceptions": "rules",
+    "factories": "class",
+    "fakes": "mock",
+    "http": "container",
+    "infra": "app",
+    "main": "lib",
+    "migrations": "tools",
+    "modules": "components",
+    "navigation": "routes",
+    "presentation": "template",
+    "protocols": "contract",
+    "repositories": "mappings",
+    "schemas": "class",
+    "ubuntu": "linux",
+    "use-cases": "functions",
+    "useCases": "functions"
+  },
+  "powershell.powerShellAdditionalExePaths": {
+    "PS7": "/mnt/c/Program Files/PowerShell/7/pwsh.exe"
+  },
+  "projectManager.git.baseFolders": ["~/projects"],
+  "react-native-tools.showUserTips": false,
+  "search.exclude": {
+    "**/.git": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/log": true,
+    "**/node_modules": true,
+    "**/tmp": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "tailwindCSS.includeLanguages": {
+    "blade": "html"
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "icon": "terminal-bash",
+      "path": "bash"
+    },
+    "zsh": {
+      "icon": "terminal-linux",
+      "path": "zsh"
+    }
+  },
+  "typescript.format.semicolons": "insert",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "window.titleBarStyle": "custom",
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#ccc" //#ff4081
+    // "editorCursor.foreground": "#ffff00",
+    // "terminalCursor.foreground": "#ffff00"
+  },
+  "workbench.colorTheme": "Ultimate White",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.restoreViewState": false,
+  "workbench.editorAssociations": {
+    "*.drawio.png": "hediet.vscode-drawio-text",
+    "*.drawio.svg": "hediet.vscode-drawio-text"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "none"
+}
