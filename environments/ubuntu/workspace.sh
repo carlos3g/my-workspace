@@ -64,8 +64,6 @@ install_nodejs() {
 install_nodejs_related_programs() {
   sudo npm install --global yarn react-devtools
   yarn config set -- --emoji true
-
-  sudo yarn global add expo-cli -y
 }
 
 install_android_studio() {

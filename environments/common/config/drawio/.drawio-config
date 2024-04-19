@@ -1,0 +1,45 @@
+{
+  "language": "",
+  "configVersion": null,
+  "defaultFonts": [
+    "Fira Code"
+  ],
+  "customFonts": [
+    {
+      "fontFamily": "Fira Code",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Fira+Code"
+    }
+  ],
+  "libraries": "general;uml;er;bpmn;flowchart;basic;arrows2;aws4",
+  "enabledLibraries": null,
+  "customLibraries": [
+    "L.scratchpad"
+  ],
+  "plugins": [],
+  "recentColors": [
+    "3333FF"
+  ],
+  "formatWidth": 240,
+  "createTarget": false,
+  "pageFormat": {
+    "x": 0,
+    "y": 0,
+    "width": 850,
+    "height": 1100
+  },
+  "search": true,
+  "showStartScreen": true,
+  "gridColor": "#d0d0d0",
+  "darkGridColor": "#424242",
+  "autosave": true,
+  "resizeImages": null,
+  "openCounter": 7,
+  "version": 18,
+  "unit": 1,
+  "isRulerOn": true,
+  "ui": "atlas",
+  "darkMode": "auto",
+  "highContrast": false,
+  "pages": true,
+  "sketchMode": false
+}
