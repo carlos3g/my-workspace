@@ -88,7 +88,6 @@ source $ZSH/oh-my-zsh.sh
 # Personal aliases
 alias copy='xclip -selection clipboard -i $1'
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-alias docker-reset='sh -c "$(curl -fsSL https://gist.githubusercontent.com/carlos3g/c2a994b50e9c1f4e626c700fe79be84a/raw)"'
 alias git-clean-branchs='git fetch -p && for branch in `git branch -vv --no-color | grep ": gone]" | awk "{print $1}"`; do git branch -D $branch; done'
 
 # WSL2
@@ -99,6 +98,22 @@ alias wsl-port-forward-reset='netsh.exe interface portproxy reset'
 
 wsl-port-forward() { # needs to be a function. related (i think): https://unix.stackexchange.com/a/516192
 	netsh.exe interface portproxy add v4tov4 listenport=$1 listenaddress=0.0.0.0 connectport=$1 connectaddress=$REACT_NATIVE_PACKAGER_HOSTNAME
+}
+
+laravel-setup-sail() {
+	docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php83-composer:latest \
+    composer install --ignore-platform-reqs
+}
+
+docker-reset() {
+  docker container stop $(docker ps -aq)
+  docker container rm $(docker ps -aq)
+  docker rmi $(docker images -q)
+  docker volume rm $(docker volume ls -q)
 }
 
 # You may need to manually set your language environment

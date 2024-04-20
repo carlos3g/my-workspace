@@ -205,15 +205,15 @@ set tabsize 2
 
 ## Paint the interface elements of nano.  These are examples;
 ## by default there are no colors, except for errorcolor.
-# set titlecolor bold,lightwhite,blue
-# set statuscolor bold,lightwhite,green
-# set errorcolor bold,lightwhite,red
-# set selectedcolor lightwhite,magenta
-# set stripecolor ,yellow
-# set scrollercolor cyan
-# set numbercolor cyan
-# set keycolor cyan
-# set functioncolor green
+set titlecolor bold,lightwhite,blue
+set statuscolor bold,black,green
+set errorcolor bold,lightwhite,red
+set selectedcolor lightwhite,magenta
+set stripecolor ,yellow
+set scrollercolor cyan
+set numbercolor bold,lightwhite,blue
+set keycolor bold,cyan
+set functioncolor green
 
 ## In root's .nanorc you might want to use:
 # set titlecolor bold,lightwhite,magenta
@@ -222,10 +222,9 @@ set tabsize 2
 # set selectedcolor lightwhite,cyan
 # set stripecolor ,yellow
 # set scrollercolor magenta
-# set numbercolor magenta
+# set numbercolor bold,lightwhite,magenta
 # set keycolor lightmagenta
 # set functioncolor magenta
-
 
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
