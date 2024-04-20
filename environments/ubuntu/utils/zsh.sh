@@ -25,6 +25,11 @@ install_zinit() {
   sh -c "$(curl -fsSL https://git.io/zinit-install)"
 }
 
+install_fzf() {
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+}
+
 install_and_setup_zsh
 install_oh_my_zsh
 install_zinit
+install_fzf
