@@ -96,6 +96,9 @@ alias git-clean-branchs='git fetch -p && for branch in `git branch -vv --no-colo
 alias fzf-update='cd ~/.fzf && git pull && ./install'
 alias fzf-finder='find * -type f | fzf > /tmp/fzf-selected-dir'
 alias fzf-copy-selected='copy /tmp/fzf-selected-dir'
+alias reload="source ~/.zshrc"
+alias myip='ifconfig | sed -En "s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p"'
+alias get="curl -O -L"
 
 # WSL2
 alias wsl-relays='socat -d -d TCP-LISTEN:5037,reuseaddr,fork TCP:$(cat /etc/resolv.conf | tail -n1 | cut -d " " -f 2):5037'

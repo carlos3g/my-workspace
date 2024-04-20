@@ -3,6 +3,12 @@
 	name = Carlos Mesquita
 	email = 52337966+carlos3g@users.noreply.github.com
 
+[color "diff"]
+  meta = white bold
+  frag = cyan bold
+  old = red bold
+  new = green bold
+
 [core]
 	editor = nano
 	excludesfile = ~/.gitignore_global
