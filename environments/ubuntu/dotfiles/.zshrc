@@ -211,3 +211,7 @@ _zshrc_private_install_zinit
 _zshrc_private_install_zinit_plugins
 _zshrc_private_install_nvm
 _zshrc_private_install_fzf
+
+alias ls="eza --icons"
+alias cat="bat --style=auto"
+alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
