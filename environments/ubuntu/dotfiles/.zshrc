@@ -99,19 +99,22 @@ alias fzf-copy-selected='copy /tmp/fzf-selected-dir'
 alias reload="source ~/.zshrc"
 alias myip='ifconfig | sed -En "s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p"'
 alias get="curl -O -L"
+# See: https://gist.github.com/matthewjberger/7dd7e079f282f8138a9dc3b045ebefa0
+alias font-rebuild-cache='fc-cache -fv'
 
 # WSL2
+alias windows-delete-identifiers='cd ~ && find . -name "*:Zone.Identifier" -type f -delete'
 alias wsl-relays='socat -d -d TCP-LISTEN:5037,reuseaddr,fork TCP:$(cat /etc/resolv.conf | tail -n1 | cut -d " " -f 2):5037'
 alias wsl-adb-server='adb.exe kill-server && adb.exe -a -P 5037 nodaemon server'
 alias wsl-port-forward-show-all='netsh.exe interface portproxy show all'
 alias wsl-port-forward-reset='netsh.exe interface portproxy reset'
 
 wsl-port-forward() { # needs to be a function. related (i think): https://unix.stackexchange.com/a/516192
-	netsh.exe interface portproxy add v4tov4 listenport=$1 listenaddress=0.0.0.0 connectport=$1 connectaddress=$REACT_NATIVE_PACKAGER_HOSTNAME
+  netsh.exe interface portproxy add v4tov4 listenport=$1 listenaddress=0.0.0.0 connectport=$1 connectaddress=$REACT_NATIVE_PACKAGER_HOSTNAME
 }
 
 laravel-setup-sail() {
-	docker run --rm \
+  docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v "$(pwd):/var/www/html" \
     -w /var/www/html \
@@ -153,7 +156,7 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	docker
+  docker
 )
 
 _zshrc_private_install_oh_my_zsh() {
@@ -201,9 +204,9 @@ _zshrc_private_install_nvm() {
 }
 
 _zshrc_private_install_fzf() {
-	[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-	eval "$(fzf --zsh)"
+  eval "$(fzf --zsh)"
 }
 
 _zshrc_private_install_oh_my_zsh
