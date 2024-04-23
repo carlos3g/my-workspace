@@ -1,3 +1,8 @@
+# ------------------------------------------------------------------------------
+# author: Carlos Mesquita
+# website: https://carlos3g.github.io
+# ------------------------------------------------------------------------------
+
 function InstallBraveBrowser {
   winget install --id=Brave.Brave  -e
 }
