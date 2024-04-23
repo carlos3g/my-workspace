@@ -37,6 +37,7 @@
   ],
   "profiles": {
     "defaults": {
+      "bellStyle": "none",
       "colorScheme": "Dracula",
       "font": {
         "face": "FiraCode Nerd Font",
