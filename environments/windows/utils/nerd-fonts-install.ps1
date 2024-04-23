@@ -43,6 +43,7 @@ foreach ($font in $fonts) {
 
 $fontFiles = Get-ChildItem -Path $fontsDir -Filter "$font*.ttf" -Recurse
 foreach ($file in $fontFiles) {
+  # See: https://www.jordanmalcolm.com/deploying-windows-10-fonts-at-scale/
   Copy-Item -Path $file.FullName -Destination $systemFontsDir -Force
   New-ItemProperty -Name $file.BaseName -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Fonts" -PropertyType string -Value $file.name
 }
