@@ -14,6 +14,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/carlos3g/my-workspace/mast
   - [Question: How to install Flipper in Ubuntu?](https://github.com/facebook/flipper/issues/1058)
   - [Configure VM acceleration on Linux](https://developer.android.com/studio/run/emulator-acceleration#vm-linux)
   - [System audio problems while Android emulator is running](https://askubuntu.com/questions/1045052/system-audio-problems-while-android-emulator-is-running)
+  - [Rewritten in Rust: Modern Alternatives of Command-Line Tools](https://zaiste.net/posts/shell-commands-rust/)
 
 - Windows
 

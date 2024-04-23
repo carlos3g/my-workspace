@@ -22,6 +22,8 @@ export REACT_NATIVE_PACKAGER_HOSTNAME=$(ip addr show eth0 | grep -oP '(?<=inet\s
 #export ADB_TRACE=adb
 export ANDROID_SERIAL=emulator-5554
 
+export BAT_THEME='ansi'
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -109,6 +111,10 @@ alias wsl-adb-server='adb.exe kill-server && adb.exe -a -P 5037 nodaemon server'
 alias wsl-port-forward-show-all='netsh.exe interface portproxy show all'
 alias wsl-port-forward-reset='netsh.exe interface portproxy reset'
 
+_exists() {
+  command -v $1 > /dev/null 2>&1
+}
+
 wsl-port-forward() { # needs to be a function. related (i think): https://unix.stackexchange.com/a/516192
   netsh.exe interface portproxy add v4tov4 listenport=$1 listenaddress=0.0.0.0 connectport=$1 connectaddress=$REACT_NATIVE_PACKAGER_HOSTNAME
 }
@@ -127,6 +133,11 @@ docker-reset() {
   docker container rm $(docker ps -aq)
   docker rmi $(docker images -q)
   docker volume rm $(docker volume ls -q)
+}
+
+fix-permissions() {
+  find . -type d -print0 | xargs -0 chmod 0755
+  find . -type f -print0 | xargs -0 chmod 0644
 }
 
 SPACESHIP_PROMPT_ORDER=(
@@ -215,6 +226,14 @@ _zshrc_private_install_zinit_plugins
 _zshrc_private_install_nvm
 _zshrc_private_install_fzf
 
-alias ls="eza --icons"
-alias cat="bat --style=auto"
-alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+if _exists fzf; then
+  alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+fi
+
+if _exists eza; then
+  alias ls="eza --icons --group-directories-first"
+fi
+
+if _exists bat; then
+  alias cat="bat --style=auto"
+fi
