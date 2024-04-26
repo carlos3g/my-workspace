@@ -1,4 +1,5 @@
-> :warning: These scripts are made for my own use. Read the files and change what you need if you want to use too
+> [!WARNING]
+> These scripts are made for my use. Read the files and change what you need if you want to use too
 
 ## Usage
 
