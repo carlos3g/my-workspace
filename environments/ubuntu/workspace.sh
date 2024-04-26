@@ -10,6 +10,7 @@
 # - Installs VS Code
 # - Installs NodeJS and Yarn
 # - Installs Cargo and rust cml alternatives
+# - Installs asdf
 
 set -e
 
@@ -34,7 +35,7 @@ install_brave() {
   # See: https://brave.com/linux
   sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
-  echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+  echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
   sudo apt update -y
   sudo apt install brave-browser -y
@@ -50,7 +51,7 @@ install_telegram() {
 
 install_vs_code() {
   # See: https://code.visualstudio.com/docs/setup/linux
-  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >packages.microsoft.gpg
 
   sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings
 
@@ -96,6 +97,11 @@ install_cargo_and_rust_alternatives() {
   cargo install bottom bat eza fd-find procs sd du-dust bandwhich
 }
 
+install_asdf() {
+  # See: https://asdf-vm.com/guide/getting-started.html
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+}
+
 update_system
 install_utils
 install_brave
@@ -106,3 +112,4 @@ install_nodejs_related_programs
 install_android_studio
 install_java
 install_cargo_and_rust_alternatives
+install_asdf
