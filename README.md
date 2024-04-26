@@ -4,7 +4,11 @@
 ## Usage
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/carlos3g/my-workspace/master/environments/ubuntu/workspace.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/carlos3g/my-workspace/main/environments/ubuntu/workspace.sh)"
+```
+
+```ps1
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/carlos3g/my-workspace/main/environments/windows/workspace.ps1'))
 ```
 
 ### Useful links
