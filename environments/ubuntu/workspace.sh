@@ -9,7 +9,7 @@
 # - Installs Telegram
 # - Installs VS Code
 # - Installs NodeJS and Yarn
-# - Installs expo-cli
+# - Installs Cargo and rust cml alternatives
 
 set -e
 
@@ -87,6 +87,15 @@ install_java() {
   sudo apt-get install -y openjdk-17-jdk
 }
 
+install_cargo_and_rust_alternatives() {
+  # See: https://doc.rust-lang.org/cargo/getting-started/installation.html
+  curl https://sh.rustup.rs -sSf | sh
+
+  source $HOME/.cargo/env
+
+  cargo install bottom bat eza fd-find procs sd du-dust bandwhich
+}
+
 update_system
 install_utils
 install_brave
@@ -96,3 +105,4 @@ install_nodejs
 install_nodejs_related_programs
 install_android_studio
 install_java
+install_cargo_and_rust_alternatives

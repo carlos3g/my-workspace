@@ -168,6 +168,7 @@ ZSH_THEME="spaceship"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   docker
+  asdf
 )
 
 _zshrc_private_install_oh_my_zsh() {
@@ -236,4 +237,8 @@ fi
 
 if _exists bat; then
   alias cat="bat --style=auto"
+fi
+
+if [ -e $HOME/.cargo/env ]; then
+  source $HOME/.cargo/env
 fi
