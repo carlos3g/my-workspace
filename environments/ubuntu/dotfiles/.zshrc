@@ -140,6 +140,13 @@ fix-permissions() {
   find . -type f -print0 | xargs -0 chmod 0644
 }
 
+zsh_history_fix() {
+  # See: https://gist.github.com/acampagnaro/97709e922f7569e67f0ef92ec7d5fcb3
+  mv ~/.zsh_history ~/.zsh_history_bad
+  strings ~/.zsh_history_bad > ~/.zsh_history
+  fc -R ~/.zsh_history
+}
+
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   dir           # Current directory section
@@ -171,7 +178,7 @@ plugins=(
   asdf
 )
 
-_zshrc_private_install_oh_my_zsh() {
+_zshrc_private_source_oh_my_zsh() {
   source $ZSH/oh-my-zsh.sh
 }
 
@@ -207,7 +214,7 @@ _zshrc_private_install_zinit_plugins() {
   zinit light spaceship-prompt/spaceship-prompt
 }
 
-_zshrc_private_install_nvm() {
+_zshrc_private_source_nvm() {
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -221,24 +228,48 @@ _zshrc_private_install_fzf() {
   eval "$(fzf --zsh)"
 }
 
-_zshrc_private_install_oh_my_zsh
+_zshrc_private_source_pnpm() {
+  # pnpm
+  export PNPM_HOME="/home/carlos3g/.local/share/pnpm"
+  case ":$PATH:" in
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
+  esac
+  # pnpm end
+}
+
+_zshrc_private_source_cargo() {
+  if [ -e $HOME/.cargo/env ]; then
+    source $HOME/.cargo/env
+  fi
+}
+
+_zshrc_private_alias() {
+  if _exists pnpm; then
+    alias pn=pnpm
+  fi
+}
+
+_zshrc_private_alias_overrides() {
+  if _exists fzf; then
+    alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+  fi
+
+  if _exists eza; then
+    alias ls="eza --icons --group-directories-first"
+  fi
+
+  if _exists bat; then
+    alias cat="bat --style=auto"
+  fi
+}
+
+_zshrc_private_source_oh_my_zsh
 _zshrc_private_install_zinit
 _zshrc_private_install_zinit_plugins
-_zshrc_private_install_nvm
+_zshrc_private_source_nvm
 _zshrc_private_install_fzf
-
-if _exists fzf; then
-  alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-fi
-
-if _exists eza; then
-  alias ls="eza --icons --group-directories-first"
-fi
-
-if _exists bat; then
-  alias cat="bat --style=auto"
-fi
-
-if [ -e $HOME/.cargo/env ]; then
-  source $HOME/.cargo/env
-fi
+_zshrc_private_source_pnpm
+_zshrc_private_source_cargo
+_zshrc_private_alias
+_zshrc_private_alias_overrides

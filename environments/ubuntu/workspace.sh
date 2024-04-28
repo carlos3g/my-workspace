@@ -102,6 +102,11 @@ install_asdf() {
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 }
 
+install_pnpm() {
+  # See: https://pnpm.io/installation
+  curl -fsSL https://get.pnpm.io/install.sh | sh -
+}
+
 update_system
 install_utils
 install_brave
@@ -113,3 +118,4 @@ install_android_studio
 install_java
 install_cargo_and_rust_alternatives
 install_asdf
+install_pnpm
