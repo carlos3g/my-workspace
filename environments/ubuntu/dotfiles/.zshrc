@@ -21,6 +21,7 @@ export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
 export REACT_NATIVE_PACKAGER_HOSTNAME=$(ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
 #export ADB_TRACE=adb
 export ANDROID_SERIAL=emulator-5554
+export WIN_HOME='/mnt/c/Users/carlo'
 
 export BAT_THEME='ansi'
 
@@ -244,6 +245,11 @@ _zshrc_private_source_cargo() {
   fi
 }
 
+_zshrc_private_source_atuin() {
+  export ATUIN_NOBIND="true"
+  eval "$(atuin init zsh)"
+}
+
 _zshrc_private_alias() {
   if _exists pnpm; then
     alias pn=pnpm
@@ -273,3 +279,4 @@ _zshrc_private_source_pnpm
 _zshrc_private_source_cargo
 _zshrc_private_alias
 _zshrc_private_alias_overrides
+_zshrc_private_source_atuin
