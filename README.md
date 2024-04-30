@@ -31,3 +31,14 @@ Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw
 - Android
 
   - [Xiaomi Bloatware List | Remove Bloatware on MIUI 14/13](https://technastic.com/xiaomi-bloatware-list-miui/#Android_Bloatware_on_Xiaomi_Phones)
+
+### Run react native in WSL2
+
+> See: https://gist.github.com/bergmannjg/461958db03c6ae41a66d264ae6504ade
+
+```sh
+wsl-adb-server
+wsl-port-forward 5037
+wsl-port-forward 8081
+wsl-relays
+```
