@@ -21,13 +21,6 @@ update_system() {
 install_utils() {
   sudo apt install git curl wget xclip g++ unrar unzip dconf-cli util-linux python3 python3-pip python3-dev gpg apt-transport-https bat gpg -y
 
-  sudo mkdir -p /etc/apt/keyrings
-  wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
-  echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
-  sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
-  sudo apt update -y
-  sudo apt install -y eza
-
   sudo ln -s /usr/bin/batcat /usr/bin/bat
 }
 
@@ -72,7 +65,7 @@ install_nodejs() {
 }
 
 install_nodejs_related_programs() {
-  sudo npm install --global yarn react-devtools
+  npm install --global yarn react-devtools
   yarn config set -- --emoji true
 }
 
@@ -107,6 +100,10 @@ install_pnpm() {
   curl -fsSL https://get.pnpm.io/install.sh | sh -
 }
 
+install_homebrew() {
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
 update_system
 install_utils
 install_brave
@@ -119,3 +116,4 @@ install_java
 install_cargo_and_rust_alternatives
 install_asdf
 install_pnpm
+install_homebrew

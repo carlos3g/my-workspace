@@ -55,6 +55,10 @@ function InstallPostman {
   winget install --id=Postman.Postman  -e
 }
 
+function InstallAutoDarkMode {
+  winget install --id=Armin2208.WindowsAutoNightMode  -e
+}
+
 InstallBraveBrowser
 InstallTelegram
 InstallVSCodeInsiders
@@ -68,3 +72,4 @@ InstallSpotify
 InstallDbeaver
 InstallDockerDesktop
 InstallPostman
+InstallAutoDarkMode
