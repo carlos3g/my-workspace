@@ -1,0 +1,24 @@
+services:
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "${FORWARD_REDIS_PORT:-6379}:6379"
+    volumes:
+      - "example-redis:/data"
+    networks:
+      - example-network
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      retries: 3
+      timeout: 5s
+
+networks:
+  example-network:
+    driver: bridge
+
+volumes:
+  example-redis:
+    driver: local
