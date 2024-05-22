@@ -92,25 +92,36 @@ fi
 
 # MARK: User configuration
 
-# Personal aliases
-alias copy='xclip -selection clipboard -i $1'
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-alias git-clean-branchs='git fetch -p && for branch in `git branch -vv --no-color | grep ": gone]" | awk "{print $1}"`; do git branch -D $branch; done'
-alias fzf-update='cd ~/.fzf && git pull && ./install'
-alias fzf-finder='find * -type f | fzf > /tmp/fzf-selected-dir'
-alias fzf-copy-selected='copy /tmp/fzf-selected-dir'
-alias reload="source ~/.zshrc"
-alias myip='ifconfig | sed -En "s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p"'
-alias get="curl -O -L"
-# See: https://gist.github.com/matthewjberger/7dd7e079f282f8138a9dc3b045ebefa0
-alias font-rebuild-cache='fc-cache -fv'
+SPACESHIP_PROMPT_ORDER=(
+  user
+  dir
+  host
+  git
+  hg
+  node
+  php
+  aws
+  exec_time
+  line_sep
+  jobs
+  exit_code
+  char
+)
+SPACESHIP_USER_SHOW=always
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_JOBS_AMOUNT_THRESHOLD=0
 
-# WSL2
-alias windows-delete-identifiers='cd ~ && find . -name "*:Zone.Identifier" -type f -delete'
-alias wsl-relays='socat -d -d TCP-LISTEN:5037,reuseaddr,fork TCP:$(cat /etc/resolv.conf | tail -n1 | cut -d " " -f 2):5037'
-alias wsl-adb-server='adb.exe kill-server && adb.exe -a -P 5037 nodaemon server'
-alias wsl-port-forward-show-all='netsh.exe interface portproxy show all'
-alias wsl-port-forward-reset='netsh.exe interface portproxy reset'
+# Set name of the theme to load
+ZSH_THEME="spaceship"
+
+plugins=(
+  docker
+  asdf
+  aws
+  nvm
+)
 
 _exists() {
   command -v $1 > /dev/null 2>&1
@@ -148,36 +159,27 @@ zsh_history_fix() {
   fc -R ~/.zsh_history
 }
 
-SPACESHIP_PROMPT_ORDER=(
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  hg            # Mercurial section (hg_branch  + hg_status)
-  node
-  exec_time     # Execution time
-  line_sep      # Line break
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-SPACESHIP_USER_SHOW=always
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_CHAR_SYMBOL="❯"
-SPACESHIP_CHAR_SUFFIX=" "
+_zshrc_private_define_alias() {
+  # Personal aliases
+  alias copy='xclip -selection clipboard -i $1'
+  alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+  alias git-clean-branchs='git fetch -p && for branch in `git branch -vv --no-color | grep ": gone]" | awk "{print $1}"`; do git branch -D $branch; done'
+  alias fzf-update='cd ~/.fzf && git pull && ./install'
+  alias fzf-finder='find * -type f | fzf > /tmp/fzf-selected-dir'
+  alias fzf-copy-selected='copy /tmp/fzf-selected-dir'
+  alias reload="source ~/.zshrc"
+  alias myip='ifconfig | sed -En "s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p"'
+  alias get="curl -O -L"
+  # See: https://gist.github.com/matthewjberger/7dd7e079f282f8138a9dc3b045ebefa0
+  alias font-rebuild-cache='fc-cache -fv'
 
-# Set name of the theme to load
-ZSH_THEME="spaceship"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  docker
-  asdf
-)
+  # WSL2
+  alias windows-delete-identifiers='cd ~ && find . -name "*:Zone.Identifier" -type f -delete'
+  alias wsl-relays='socat -d -d TCP-LISTEN:5037,reuseaddr,fork TCP:$(cat /etc/resolv.conf | tail -n1 | cut -d " " -f 2):5037'
+  alias wsl-adb-server='adb.exe kill-server && adb.exe -a -P 5037 nodaemon server'
+  alias wsl-port-forward-show-all='netsh.exe interface portproxy show all'
+  alias wsl-port-forward-reset='netsh.exe interface portproxy reset'
+}
 
 _zshrc_private_source_oh_my_zsh() {
   source $ZSH/oh-my-zsh.sh
@@ -213,14 +215,6 @@ _zshrc_private_install_zinit_plugins() {
   zinit light zsh-users/zsh-autosuggestions
   zinit light zsh-users/zsh-completions
   zinit light spaceship-prompt/spaceship-prompt
-}
-
-_zshrc_private_source_nvm() {
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-  export PATH="$PATH:$(yarn global bin)"
 }
 
 _zshrc_private_install_fzf() {
@@ -270,13 +264,15 @@ _zshrc_private_alias_overrides() {
   fi
 }
 
+_zshrc_private_define_alias
 _zshrc_private_source_oh_my_zsh
 _zshrc_private_install_zinit
 _zshrc_private_install_zinit_plugins
-_zshrc_private_source_nvm
 _zshrc_private_install_fzf
 _zshrc_private_source_pnpm
 _zshrc_private_source_cargo
 _zshrc_private_alias
 _zshrc_private_alias_overrides
 _zshrc_private_source_atuin
+
+bindkey '^H' backward-kill-word
