@@ -59,6 +59,14 @@ function InstallAutoDarkMode {
   winget install --id=Armin2208.WindowsAutoNightMode  -e
 }
 
+function ActivateHyperV {
+  Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
+}
+
+function ActivateWindowsSandBox {
+  Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All -Online
+}
+
 InstallBraveBrowser
 InstallTelegram
 InstallVSCodeInsiders
@@ -73,3 +81,5 @@ InstallDbeaver
 InstallDockerDesktop
 InstallPostman
 InstallAutoDarkMode
+ActivateHyperV
+ActivateWindowsSandBox

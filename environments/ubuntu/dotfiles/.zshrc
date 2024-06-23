@@ -131,6 +131,10 @@ wsl-port-forward() { # needs to be a function. related (i think): https://unix.s
   netsh.exe interface portproxy add v4tov4 listenport=$1 listenaddress=0.0.0.0 connectport=$1 connectaddress=$REACT_NATIVE_PACKAGER_HOSTNAME
 }
 
+towin() {
+  cp $WIN_HOME/Documents $1
+}
+
 laravel-setup-sail() {
   docker run --rm \
     -u "$(id -u):$(id -g)" \
