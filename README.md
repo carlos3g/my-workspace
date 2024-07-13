@@ -35,6 +35,7 @@ Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw
 ### Run react native in WSL2
 
 > See: https://gist.github.com/bergmannjg/461958db03c6ae41a66d264ae6504ade
+> See: https://gist.github.com/bergmannjg/461958db03c6ae41a66d264ae6504ade?permalink_comment_id=4149833#gistcomment-4149833
 
 ```sh
 wsl-adb-server
