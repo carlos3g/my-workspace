@@ -38,8 +38,7 @@ Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw
 > See: https://gist.github.com/bergmannjg/461958db03c6ae41a66d264ae6504ade?permalink_comment_id=4149833#gistcomment-4149833
 
 ```sh
+# open emulator first
 wsl-adb-server
-wsl-port-forward 5037
-wsl-port-forward 8081
-wsl-relays
+wsl-relays # for npm start
 ```
